@@ -1,0 +1,22 @@
+def superReducedString(s):
+
+    i = 1
+    
+    while i < len(s):
+        
+        if s[i] == s[i-1]:
+            s = s[0:i-1] + s[i+1:]
+            i=1
+        else:
+            i +=1
+    
+    if len(s):
+        print(s)
+    else:
+        print("Empty String")
+
+if __name__ == '__main__':
+    
+    s = input()
+
+    result = superReducedString(s)
